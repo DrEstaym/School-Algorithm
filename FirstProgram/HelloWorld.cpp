@@ -3,6 +3,6 @@ using namespace std;
 
 int main() {
     //Comment
-    cout << "Hello Fuckin World!\n";
-    cout << "I hate futa\n";
+    cout << "Hello World!\n";
+    cout << "I wish to die\n";
 }
