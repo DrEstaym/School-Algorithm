@@ -7,7 +7,7 @@ int main() {
     cout << "Bilangan b: "; cin >> b;
 
     int remainder = a % b;
-    int result = (a - remainder) / b;
+    int result = a / b;
 
     cout << "Hasil pembagian: " << result << endl;
     cout << "Hasil sisa pembagian: " << remainder << endl;

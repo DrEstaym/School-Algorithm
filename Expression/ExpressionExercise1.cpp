@@ -1,4 +1,5 @@
 #include <iostream>
+#include<iomanip>
 using namespace std;
 
 int main() {
@@ -9,5 +10,6 @@ int main() {
     float area;
     area = (a * t)/2.0;
 
-    cout << "Luas: " << area << endl;
+    cout << "Luas: ";
+    cout << fixed  << setprecision(2) << area;
 }
