@@ -9,7 +9,7 @@ int main() {
     if(denom <= 0) {
         cout << "Denominator cannot be a zero!" << endl;
     } else {
-        float hasil = num/denom;
-        cout << "Result = " << hasil;  
+        float result = num/denom;
+        cout << "Result = " << result;  
     }
 }
