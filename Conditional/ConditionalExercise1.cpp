@@ -6,7 +6,7 @@ int main() {
     cout << "Numerator "; cin >> num;
     cout << "Denominator: "; cin >> denom;
 
-    if(denom <= 0) {
+    if(denom == 0) {
         cout << "Denominator cannot be a zero!" << endl;
     } else {
         float result = num/denom;
