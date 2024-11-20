@@ -45,6 +45,12 @@ double ballSurface(double radius) {
     return 4.0 * (pi * radius * radius);
 }
 
+double pyramidSurface(double side, double height) {
+    double sideHeight = sqrt(pow(side / 2, 2) + pow(height, 2));
+
+    return (side * side) + (4.0 * ((sideHeight * side) / 2.0));
+}
+
 
 int main() {
     int N;
@@ -120,6 +126,14 @@ int main() {
                 cin >> radii6;
 
                 cout << fixed << setprecision(2) << "The surface area is : " << ballSurface(radii6) << endl;
+
+                break;
+            case 7:
+                double side7, height7;
+                cout << "Side length and height? ";
+                cin >> side7 >> height7;
+
+                cout << fixed << setprecision(2) << "The surface area is: " << pyramidSurface(side7, height7) << endl;
 
                 break;
             default:
