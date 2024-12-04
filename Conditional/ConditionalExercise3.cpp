@@ -19,7 +19,7 @@ int main() {
         case 11: cout << "This is November" << endl; break;
         case 12: cout << "This is December" << endl; break;
 
-        default: cout << "The month does not exist" << endl; break;
+        default: cout << "Tolol lu" << endl; break;
     }
 }
 
