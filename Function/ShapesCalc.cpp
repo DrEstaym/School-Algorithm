@@ -138,8 +138,8 @@ int main() {
                 break;
 
             case -1:
-                cout << "Program Ended." << endl
-                break:
+                cout << "Program Ended." << endl;
+                break;
 
             default:
                 cout << "Invalid Input" << endl;
