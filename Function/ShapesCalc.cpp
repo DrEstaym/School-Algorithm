@@ -136,8 +136,13 @@ int main() {
                 cout << fixed << setprecision(2) << "The surface area is: " << pyramidSurface(side7, height7) << endl;
 
                 break;
+
+            case -1:
+                cout << "Program Ended." << endl
+                break:
+
             default:
-                cout << "Program Ended or Invalid Input" << endl;
+                cout << "Invalid Input" << endl;
                 break;
 
         }
