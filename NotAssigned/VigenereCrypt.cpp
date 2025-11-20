@@ -86,5 +86,37 @@ int main() {
         cout << endl;
     }
     
-    cout << crypted;
+    cout << crypted << endl;
+
+    //Decrypt
+
+    //Lay keyword over crypted
+    string overlay;
+    for(int i = 0; i < crypted.length(); i++) {
+        char keySingle = keystream[i % keystream.length()];
+        overlay.push_back(keySingle);
+    }
+
+    //Find index 
+
+    string decrypted;
+    for(int point = 0; point < crypted.length(); point++) {
+        int leftInd = 0;
+        for(int i = 0; i < 26; i++) {
+            if(vignereTable[i][0] == overlay[i]) {
+                leftInd = i;
+                break;
+            }
+        }
+
+
+        for(int i = 0; i < 26; i++) {
+            if(vignereTable[leftInd][i] == crypted[point]) {
+                decrypted.push_back(vignereTable[0][i]);
+            }
+        }
+    }
+
+    cout << decrypted;
+    
 }
