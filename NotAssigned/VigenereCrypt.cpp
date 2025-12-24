@@ -97,26 +97,32 @@ int main() {
         overlay.push_back(keySingle);
     }
 
-    //Find index 
+    //decrypt
 
-    string decrypted;
-    for(int point = 0; point < crypted.length(); point++) {
-        int leftInd = 0;
-        for(int i = 0; i < 26; i++) {
-            if(vignereTable[i][0] == overlay[i]) {
-                leftInd = i;
+    string decrypted = "";
+    for(int i = 0; i < overlay.length(); i++) {
+        //find leftmost index
+        int index = 0;
+        for(int j = 0; j < 26; j++) {
+            if(overlay[j] == vignereTable[j][0]) {
+                index = j;
                 break;
             }
         }
 
-
-        for(int i = 0; i < 26; i++) {
-            if(vignereTable[leftInd][i] == crypted[point]) {
-                decrypted.push_back(vignereTable[0][i]);
+        //find the crypted word in index line
+        int top_index = 0;
+        for(int j = 0; j < 26; j++) {
+            if(vignereTable[index][j] == crypted[i]) {
+                top_index = j;
+                break;
             }
         }
+
+        //find the message up top
+        decrypted = decrypted + vignereTable[0][top_index];
     }
 
-    cout << decrypted;
+    cout << decrypted << endl;
     
 }
